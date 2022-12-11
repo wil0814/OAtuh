@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  db:  # 資料庫之後會用到
+    image: mysql:latest
+    ports:
+        - "3307:3306"
+    environment:
+        - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+        - ./mysql:/var/lib/mysql
+
+
+  redis: # 快取
+    image: redis:latest
+    ports:
+        - "6379:6379"
+
+
+  backend: # 後端的環境
+    image: golang:1.19
+    volumes:
+        - .:/go/src/code
+    command: tail -F anything
+    ports:
+        - "9090:9090"

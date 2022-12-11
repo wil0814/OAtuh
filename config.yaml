@@ -1,0 +1,6 @@
+MODE: "debug"
+PORT: 9090
+GOOGLE_SECRET_KEY: "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"
+GOOLE_CLIENT_ID: "1080697725086-me8vgs586f9mnag1sd9kb8po5j8v3j46.apps.googleusercontent.com"
+JWT_TOKEN_LIFE: 2592000
+JWT_SECRET: "OAuthGoogle"
